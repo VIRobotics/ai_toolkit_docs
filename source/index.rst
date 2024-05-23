@@ -10,7 +10,9 @@ Welcome to 仪酷AI工具包使用文档's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+  Introduction/index.rst
   Install/index.rst
+  DeveloperGuide/index.rst
 
 Indices and tables
 ==================
