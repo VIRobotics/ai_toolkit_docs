@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>开发者指南 &mdash; 仪酷AI工具包使用文档  文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2ccfc426"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="开发者指南" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            仪酷AI工具包使用文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/index.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Install/index.html">安装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">开发者指南</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">开发者指南</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">快速开始</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">函数介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">范例指南</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">故障排除</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">常见问题及解决方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">错误代码及其含义</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">部署</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#faq">FAQ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">仪酷AI工具包使用文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">开发者指南</a></li>
+      <li class="breadcrumb-item active">开发者指南</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/DeveloperGuide/开发者指南.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>开发者指南<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="id2">
+<h2>介绍<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>本章旨在帮助开发者全面了解并熟练使用<strong>AI Vision Toolkit for OpenVINO (AIVT-OV)</strong> 工具包。通过本章内容，您将学会如何快速入门、掌握基本操作、运用高级功能、解决常见问题以及优化性能，确保您能够高效地开发和部署基于AIVT-OV的应用程序。</p>
+<p>通过阅读本章，您将学会：</p>
+<ul class="simple">
+<li><p><strong>创建并配置项目</strong>：从头开始创建新项目，并正确配置所需环境和依赖项。</p></li>
+<li><p><strong>使用基本功能</strong>：掌握AIVT-OV工具包的基本功能和操作，能够进行简单的图像处理和视觉识别任务。</p></li>
+<li><p><strong>运用高级功能</strong>：了解并运用工具包的高级功能，进行复杂的深度学习和计算机视觉任务。</p></li>
+<li><p><strong>故障排除</strong>：识别并解决开发过程中遇到的常见问题和错误。</p></li>
+<li><p><strong>部署应用</strong>：学习如何将开发的应用部署到目标设备，并进行性能优化和硬件配置。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>快速开始<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>函数介绍<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>安装好的OpenVINO工具包位于Block Diagram&gt;&gt;Functions&gt;&gt;Addons&gt;&gt;VIRobotics&gt;&gt;AI Vision Toolkit for OpenVINO，包括：<code class="docutils literal notranslate"><span class="pre">opencv_yiku</span></code>、<code class="docutils literal notranslate"><span class="pre">OpenVINO</span></code>、<code class="docutils literal notranslate"><span class="pre">ModelZoo</span></code>三个模块。</p>
+<img src="../_static/imgs/DeveloperGuide/fuctions.png" alt="fuctions" style="zoom:100%;" /><p>以下是这三个模块的详细介绍：</p>
+<p>三个模块的详细介绍：</p>
+<ol class="simple">
+<li><p><strong>opencv_yiku</strong>：</p>
+<ul class="simple">
+<li><p>可调用市面上主流的USB摄像头、网络摄像头轻松采集图像，可<strong>高速采集图像</strong></p></li>
+<li><p>提供数百个OpenCV中传统图像处理的算子，满足各种需求，如图像滤波、形态学操作、特征检测、模板匹配等。</p></li>
+<li><p>适用于基本图像处理和预处理任务。</p></li>
+</ul>
+</li>
+<li><p><strong>OpenVINO</strong>：</p>
+<ul class="simple">
+<li><p>集成了OpenVINO™的深度学习推理引擎函数，支持加载和运行各种深度学习模型。</p></li>
+<li><p>支持多种硬件加速选项（如CPU、GPU、VPU），以优化推理性能。</p></li>
+</ul>
+</li>
+<li><p><strong>ModelZoo</strong>：</p>
+<ul class="simple">
+<li><p>包含深度学习模型加载推理等函数，可用于图像分类、目标检测、图像分割等任务。</p></li>
+<li><p>提供了便捷的模型加载和配置接口，帮助开发者快速应用模型。</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id5">
+<h3>范例指南<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>范例可以在<code class="docutils literal notranslate"><span class="pre">LabVIEW</span> <span class="pre">install</span> <span class="pre">path\examples\VIRobotics\AI</span> <span class="pre">Vision\</span></code>路径中找到。也可以在LabVIEW的help中找到，具体方式为：Help&gt;&gt;Find Examples&gt;&gt;Directory Structure&gt;&gt;VIRobotics&gt;&gt;AI Vision</p>
+<img src="..\_static\imgs\DeveloperGuide\find_examples.png" /><p>这些范例主要分为以下四部分内容：</p>
+<ol class="simple">
+<li><p><strong>CV</strong>：</p>
+<ul class="simple">
+<li><p>包含一些传统视觉处理内容的范例，如边缘检测、形态学操作、滤波等。</p></li>
+<li><p>示例：<code class="docutils literal notranslate"><span class="pre">Edge</span> <span class="pre">Detection.vi</span></code>、<code class="docutils literal notranslate"><span class="pre">Morphological</span> <span class="pre">Operations.vi</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>License Management</strong>：</p>
+<ul class="simple">
+<li><p>主要用于部署时的一些激活范例。</p></li>
+<li><p>示例：<code class="docutils literal notranslate"><span class="pre">Activate</span> <span class="pre">License.vi</span></code>、<code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">License</span> <span class="pre">Status.vi</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Object Detection</strong>：</p>
+<ul class="simple">
+<li><p>主要是YOLO系列的目标检测范例，包括YOLOv5/YOLOv6/YOLOv6/YOLOv6/YOLOv9/YOLOv8 Seg/YOLOv8 Pose/YOLOv8 OBB等模型的范例。</p></li>
+</ul>
+</li>
+<li><p><strong>Segment</strong>：</p>
+<ul class="simple">
+<li><p>包含DeepLabv3/DeepLabv3+和yiku-seg的一些分割范例。</p></li>
+</ul>
+</li>
+</ol>
+<p>每个范例都提供了详细的步骤说明和注释，帮助开发者理解和应用这些功能。</p>
+</section>
+</section>
+<section id="id6">
+<h2>故障排除<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<section id="id7">
+<h3>常见问题及解决方法<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>问题1：工具包安装失败</strong></p>
+<ul>
+<li><p>解决方案：检查是否关闭了所有安全防护软件，确保VIPM以管理员身份运行。</p></li>
+</ul>
+</li>
+<li><p><strong>问题2：无法激活许可证</strong></p>
+<ul>
+<li><p>解决方案：确认输入的License ID和Key是否正确，检查网络连接是否正常。必要时联系技术支持获取帮助。</p></li>
+</ul>
+</li>
+<li><p><strong>问题3：相机无法连接</strong></p>
+<ul>
+<li><p>解决方案：检查相机是否正确连接到计算机，确保驱动程序已正确安装。尝试更换USB端口或重新启动计算机。</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id8">
+<h3>错误代码及其含义<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<p>待更新……</p>
+</section>
+</section>
+<section id="id9">
+<h2>部署<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<p>待更新……</p>
+</section>
+<section id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>问题1：如何检查我的许可证状态？</strong></p>
+<ul>
+<li><p>答：打开LabVIEW，点击Tools—VIRobotics License Manager，查看许可证状态。</p></li>
+</ul>
+</li>
+<li><p><strong>问题2：如何更新工具包到最新版本？</strong></p>
+<ul>
+<li><p>答：使用VIPM搜索最新版本的AIVT-OV工具包并安装，确保关闭所有安全防护软件，并以管理员身份运行VIPM。</p></li>
+</ul>
+</li>
+<li><p><strong>问题3：我的图像处理速度很慢，如何优化？</strong></p>
+<ul>
+<li><p>答：确保启用了硬件加速选项，优化图像处理算法，减少不必要的计算步骤。</p></li>
+</ul>
+</li>
+</ul>
+<p>如有其他问题，请通过support&#64;virobotics.net联系技术支持团队。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="index.html" class="btn btn-neutral float-left" title="开发者指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, 仪酷智能科技有限公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

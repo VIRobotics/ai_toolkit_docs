@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Guide &mdash; 仪酷AI工具包使用文档  文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2ccfc426"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            仪酷AI工具包使用文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/index.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Install/index.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">开发者指南</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">仪酷AI工具包使用文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Developer Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/DeveloperGuide/DeveloperGuide.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This chapter aims to help developers fully understand and proficiently use the <strong>AI Vision Toolkit for OpenVINO (AIVT-OV)</strong>. Through the content of this chapter, you will learn how to quickly get started, master basic operations, use advanced features, troubleshoot common issues, and optimize performance, ensuring that you can efficiently develop and deploy applications based on AIVT-OV.</p>
+<p>By reading this chapter, you will learn:</p>
+<ul class="simple">
+<li><p><strong>Creating and Configuring Projects</strong>: Create new projects from scratch and properly configure the necessary environment and dependencies.</p></li>
+<li><p><strong>Using Basic Functions</strong>: Master the basic functions and operations of the AIVT-OV toolkit to perform simple image processing and visual recognition tasks.</p></li>
+<li><p><strong>Using Advanced Features</strong>: Understand and use the advanced features of the toolkit to perform complex deep learning and computer vision tasks.</p></li>
+<li><p><strong>Troubleshooting</strong>: Identify and resolve common issues and errors encountered during development.</p></li>
+<li><p><strong>Deploying Applications</strong>: Learn how to deploy developed applications to target devices and optimize performance and hardware configurations.</p></li>
+</ul>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<section id="function-introduction">
+<h3>Function Introduction<a class="headerlink" href="#function-introduction" title="Link to this heading"></a></h3>
+<p>The installed OpenVINO toolkit can be found in Block Diagram &gt;&gt; Functions &gt;&gt; Addons &gt;&gt; VIRobotics &gt;&gt; AI Vision Toolkit for OpenVINO, including the <code class="docutils literal notranslate"><span class="pre">opencv_yiku</span></code>, <code class="docutils literal notranslate"><span class="pre">OpenVINO</span></code>, and <code class="docutils literal notranslate"><span class="pre">ModelZoo</span></code> modules.</p>
+<img src="..\_static\imgs\DeveloperGuide\fuctions.png" alt="functions" style="zoom:100%;" /><p>Here are the detailed introductions of these three modules:</p>
+<ol class="simple">
+<li><p>opencv_yiku</p>
+<ul class="simple">
+<li><p>Supports easy image acquisition using mainstream USB cameras and network cameras, with high-speed image acquisition.</p></li>
+<li><p>Provides hundreds of traditional image processing operators in OpenCV to meet various needs, such as image filtering, morphology operations, feature detection, and template matching.</p></li>
+<li><p>Suitable for basic image processing and preprocessing tasks.</p></li>
+</ul>
+</li>
+<li><p>OpenVINO</p>
+<ul class="simple">
+<li><p>Integrates OpenVINO™'s deep learning inference engine functions, supporting the loading and running of various deep learning models.</p></li>
+<li><p>Supports multiple hardware acceleration options (such as CPU, GPU, VPU) to optimize inference performance.</p></li>
+</ul>
+</li>
+<li><p>ModelZoo</p>
+<ul class="simple">
+<li><p>Includes functions for deep learning model loading and inference, which can be used for image classification, object detection, and image segmentation tasks.</p></li>
+<li><p>Provides convenient model loading and configuration interfaces to help developers quickly apply models.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="example-guide">
+<h3>Example Guide<a class="headerlink" href="#example-guide" title="Link to this heading"></a></h3>
+<p>Examples can be found in the <code class="docutils literal notranslate"><span class="pre">LabVIEW</span> <span class="pre">install</span> <span class="pre">path\examples\VIRobotics\AI</span> <span class="pre">Vision\</span></code> directory. They can also be found in LabVIEW help: Help &gt;&gt; Find Examples &gt;&gt; Directory Structure &gt;&gt; VIRobotics &gt;&gt; AI Vision</p>
+<img src="..\_static\imgs\DeveloperGuide\find_examples.png" /><p>These examples are mainly divided into the following four parts:</p>
+<ol class="simple">
+<li><p>CV</p>
+<ul class="simple">
+<li><p>Includes examples of traditional vision processing content, such as edge detection, morphology operations, filtering, etc.</p></li>
+<li><p>Examples: <code class="docutils literal notranslate"><span class="pre">Edge</span> <span class="pre">Detection.vi</span></code>, <code class="docutils literal notranslate"><span class="pre">Morphological</span> <span class="pre">Operations.vi</span></code></p></li>
+</ul>
+</li>
+<li><p>License Management</p>
+<ul class="simple">
+<li><p>Mainly used for activation examples during deployment.</p></li>
+<li><p>Examples: <code class="docutils literal notranslate"><span class="pre">Activate</span> <span class="pre">License.vi</span></code>, <code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">License</span> <span class="pre">Status.vi</span></code></p></li>
+</ul>
+</li>
+<li><p>Object Detection</p>
+<ul class="simple">
+<li><p>Mainly YOLO series object detection examples, including models such as YOLOv5/YOLOv6/YOLOv7/YOLOv8 Seg/YOLOv8 Pose/YOLOv8 OBB, etc.</p></li>
+</ul>
+</li>
+<li><p>Segment</p>
+<ul class="simple">
+<li><p>Includes segmentation examples of DeepLabv3/DeepLabv3+ and yiku-seg.</p></li>
+</ul>
+</li>
+</ol>
+<p>Each example provides detailed step-by-step instructions and annotations to help developers understand and apply these features.</p>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="common-issues-and-solutions">
+<h3>Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Issue 1: Toolkit Installation Failed</p>
+<ul>
+<li><p>Solution: Ensure all security software is disabled and VIPM is run as an administrator.</p></li>
+</ul>
+</li>
+<li><p>Issue 2: Unable to Activate License</p>
+<ul>
+<li><p>Solution: Verify that the License ID and Key are entered correctly and check the network connection. If necessary, contact technical support for assistance.</p></li>
+</ul>
+</li>
+<li><p>Issue 3: Camera Not Connecting</p>
+<ul>
+<li><p>Solution: Ensure the camera is properly connected to the computer and the driver is correctly installed. Try changing the USB port or restarting the computer.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="error-codes-and-their-meanings">
+<h3>Error Codes and Their Meanings<a class="headerlink" href="#error-codes-and-their-meanings" title="Link to this heading"></a></h3>
+<p>To be updated...</p>
+</section>
+</section>
+<section id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Link to this heading"></a></h2>
+<p>To be updated...</p>
+</section>
+<section id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Question 1: How do I check my license status?</strong></p>
+<ul>
+<li><p>Answer: Open LabVIEW, click Tools—VIRobotics License Manager, and check the license status.</p></li>
+</ul>
+</li>
+<li><p><strong>Question 2: How do I update the toolkit to the latest version?</strong></p>
+<ul>
+<li><p>Answer: Use VIPM to search for the latest version of the AIVT-OV toolkit and install it. Ensure all security software is disabled and run VIPM as an administrator.</p></li>
+</ul>
+</li>
+<li><p><strong>Question 3: My image processing speed is slow. How can I optimize it?</strong></p>
+<ul>
+<li><p>Answer: Ensure hardware acceleration options are enabled, optimize image processing algorithms, and reduce unnecessary computational steps.</p></li>
+</ul>
+</li>
+</ul>
+<p>If you have any other questions, please contact the technical support team at support&#64;virobotics.net.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, 仪酷智能科技有限公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
